@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body> 
+    <!-- Navigation bar -->
+    <header>   
+        <h1 id="label"><a href="#">SizzleByte</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#Home" style="--i:1;" class="active">Home</a></li>
+                <li><a href="#about" style="--i:2;">About</a></li>
+                <li><a href="#Best-seller" style="--i:3;">Best-seller</a></li>
+                <li><a href="#Menu" style="--i:4;">Menu</a></li>
+                <li><a href="#Contact" style="--i:5;">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->         
+    <section class="home" id="Home">
+        <div class="home-contents">
+            <h3>Come in and try</h3>
+            <h1>SizzleByte</h1>
+            <h3>Because we offer <span class="multiple-text"></span></h3>
+            
+            <a href="#" class="btn">Order Now</a>
+        </div>
+
+        <div class="homepic">
+            <img src="./pictures/food_design1-nobg.png" alt="Food Design">
+        </div>
+    </section> 
+
+     <!-- About Section --> 
+     <section class="about" id="about">
+        <div class="vid">
+            <video autoplay loop muted controls>
+                <!-- If you have different video formats, specify multiple source tags with different MIME types -->
+                <source src="./pictures/cooking-video.mp4" type="video/mp4">
+                <source src="./pictures/cooking-video.webm" type="video/webm">
+                <!-- Fallback content in case the video isn't supported -->
+                Your browser does not support the video tag.
+            </video>
+
+            <img src="./pictures/cute-emoji-nobg.png" class="emoji">
+
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>SizzleByte</span></h2>
+            <h3>Yummy Steak</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, a molestias totam unde,
+               asperiores repudiandae voluptatibus cum quod earum dolores eos error reprehenderit.
+               Incidunt eligendi in quas illo itaque laudantium.
+            </p>
+
+            <a href="#" class="btn">Read More</a>
+        </div>   
+     </section>
+
+      <!-- Best-seller Section --> 
+      <section class="Best" id="Best-seller">
+        <h2 class="heading">Our <span>best seller</span></h2>
+          <div class="best-container">
+            <div class="best-seller">
+                <img src="./pictures/best1.jpg">
+                <h3>Steak & Potato Skillet</h3>
+                <p>In this simple version of the dynamic duo, a skillet of crispy potatoes and tender,
+                   seared flank steak gets bathed in a tangy, savory garlic mustard butter 
+                </p>
+                <a href="#" class="btn">Order Now</a>
+              </div>
+    
+                <div class="best-seller">
+                    <img src="./pictures/best2.jpg">
+                    <h3>Grilled Steak</h3>
+                    <p>Our all-time favorite for grilling is the ribeye. Thick and beautiful,
+                       with the ideal amount of marbling of fat (aka flavor!), it doesn’t
+                      even need a marinade.
+                    </p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+    
+                <div class="best-seller">
+                    <img src="./pictures/best3.jpg">
+                    <h3>Grilled Steak Salad</h3>
+                    <p> You’ll grill it (and red onions), then combine it with cherry tomatoes, blue cheese,
+                        basil, and a drizzle of tangy balsamic dressing,
+                        turning it into the kind of impressive-but-secretly-easy dish you’ll be making all the time.
+                    </p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+          </div>    
+         </div>
+      </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="Menu">
+        <h2 class="head">Our <span>Menu</span></h2>
+        <div class="wrapper">
+            <i id="left" class='bx bx-chevron-left' ></i>
+            <ul class="carousel dragging">
+                <!-- slide 1 -->
+                <li class="card">
+                    <div class="img"><img src="./pictures/best7.jpg" alt="img" draggable="false"></div>
+                    <h2>Steak Bugogi</h2>
+                    <span>$30</span>
+                    <a href="#" class="btn">Order</a>
+                </li>
+
+                <!-- slide 2 -->
+                <li class="card">
+                    <div class="img"><img src="./pictures/best2.jpg" alt="img" draggable="false"></div>
+                    <h2>Grilled Steak</h2>
+                    <span>$50</span>
+                    <a href="#" class="btn">Order</a>
+                </li>
+
+                <!-- slide 3 -->
+                <li class="card">
+                    <div class="img"><img src="./pictures/best3.jpg" alt="img" draggable="false"></div>
+                    <h2>Grilled Steak Salad</h2>
+                    <span>$40</span>
+                    <a href="#" class="btn">Order</a>
+                </li>
+
+                <!-- slide 4 -->
+                <li class="card">
+                    <div class="img"><img src="./pictures/best4.jpg" alt="img" draggable="false"></div>
+                    <h2>Steak Au Poivre Soup</h2>
+                    <span>$45</span>
+                    <a href="#" class="btn">Order</a>
+                </li>
+
+                <!-- slide 5 -->
+                <li class="card">
+                    <div class="img"><img src="./pictures/best5.jpg" alt="img" draggable="false"></div>
+                    <h2>Grilled Tri-Tip</h2>
+                    <span>$30</span>
+                    <a href="#" class="btn">Order</a>
+                </li>
+
+                <!-- slide 6 -->
+                <li class="card">
+                    <div class="img"><img src="./pictures/best6.jpg" alt="img" draggable="false"></div>
+                    <h2>Air Fryer Steak Bites</h2>
+                    <span>$35</span>
+                    <a href="#" class="btn">Order</a>
+                </li>
+
+                <!-- slide 7 -->
+                <li class="card">
+                    <div class="img"><img src="./pictures/best1.jpg" alt="img" draggable="false"></div>
+                    <h2>Steak & Potato Skillet</h2>
+                    <span>$35</span>
+                    <a href="#" class="btn">Order</a>
+                </li>
+            </ul>
+            <i id="right" class='bx bx-chevron-right' ></i>
+        </div>
+    </section>
+    
+
+    <!-- Contacts Section -->
+    <section class="contact" id="Contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+    
+        <form action="#" method="POST">
+            <div class="input-box">
+                <input type="text" name="fullname" placeholder="Full Name" required class="input">
+                <input type="email" name="email" placeholder="Email Address" required class="input">
+            </div>
+    
+            <div class="input-box">
+                <input type="text" name="mobile" placeholder="Mobile Number" class="input">
+                <input type="text" name="subject" placeholder="Email Subject" class="input">
+            </div>
+    
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required class="input"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    
+ 
+
+
+
+    <!-- For word looping -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

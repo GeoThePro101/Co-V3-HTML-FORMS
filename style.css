@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --second-text-color: #d86e28;
+}
+
+body{
+    background: var(--second-bg-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    height: 120px;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 30px;
+    animation: glow 2s infinite alternate;
+    flex-wrap: wrap;
+    background-image: url(./pictures/bg2.jfif);
+}
+
+#label {
+    margin-right: auto;
+    letter-spacing: 10px;
+    font-size: 35px;
+    animation: slideRight 1s ease forwards;
+    
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 23px;
+}
+
+header a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    animation: slideTop .5s ease-in-out forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+
+header a:hover {
+    color: yellow;
+    font-size: larger;
+}
+
+header a.active {
+    color: yellow;  
+    font-size: larger;
+}
+
+
+
+
+/* For Glowing Effects */
+@keyframes glow {
+    0% {
+        box-shadow: 0 1px 0 rgb(225, 245, 74);
+    }
+    50% {
+        box-shadow: 0 1px 15px 5px rgb(255, 88, 5); /* Adjust the glow color and intensity here */
+    }
+    100% {
+        box-shadow: 0 1px 0 rgb(225, 245, 74);
+    }
+}
+
+/* For Animation Effects */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;  
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* End of Effects */
+
+
+section {
+    min-height: 100vh; 
+    padding: 60px;
+    padding-top: 120px;
+}
+
+/* Home Section */
+.home{
+   position: relative;
+}
+
+.homepic{
+    position: absolute;
+    top: 35%;
+    right: 90px;
+    transform: translateY(-50%);
+    animation: zoomIn 1s ease forwards, floatImage 3s ease-in-out infinite;
+    animation-delay: 0.3s, 2s;
+}
+
+.home-contents{
+    position: absolute;
+    top: 40%;
+    left: 90px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.home-contents h3{
+    font-size: 50px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.home-contents h1{
+    font-size: 120px;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.home-contents span {
+    color: orange;
+}
+
+
+.btn{
+    display: inline-block;
+    background: orange;
+    color: #fff;
+    padding: 1rem 2.8rem;
+    margin-top: 20px;
+    border-radius: 4rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    animation: slideBottom 1s ease forwards; 
+    animation-delay: 0.5s;
+    animation: glow 2s infinite alternate;
+    cursor: pointer;
+}
+
+.btn:hover{
+    font-size: larger;
+    opacity: 0.7;
+    background-color: yellow;
+    color: black;
+}
+
+
+/* About Section */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+.vid video {
+    border: 5px solid orange; 
+    border-radius: 15px;
+    animation: glow 2s infinite alternate;
+    width: 35vw; 
+    height: 45vh;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.about-content span{
+    color: orange;
+}
+
+.emoji {
+    position: absolute;
+    top: 155%; 
+    right: 5%;  
+    height: 400px; 
+    width: auto;  
+    border-radius: 50%; 
+    animation: floatImage 4s ease-in-out infinite;
+    animation-delay:  2s;
+}
+
+/* Best-seller Section */
+
+.Best h2{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.Best span{
+    color: orange;
+}
+
+.best-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.best-container .best-seller{
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    animation: glow 2s infinite alternate;
+}
+
+.best-container .best-seller:hover{
+    border-color: orange;
+    transform: scale(1.02);
+}
+
+.best-seller{
+    color: var(--text-color);
+}
+
+.best-seller img {
+    height: 200px;
+    width: 200px;
+    border: .2rem solid orange;
+    border-radius: 100px;
+    margin-bottom: 30px;
+}
+
+.best-seller h3 {
+    font-size: 2.5rem;
+}
+
+.best-seller p {
+    font-size: 1rem;
+    margin: 1rem 0 1rem;
+}
+
+/* Menu Section */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+.head {
+    position: absolute;
+    top: 320%;
+    font-size: 80px;
+}
+
+.menu span {
+    color: orange;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: orange;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 355%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.wrapper i:first-child{
+    left: 19%;
+}
+
+.wrapper i:last-child {
+    right: 19%;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel :where(.card, .img){
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 370px;
+    list-style: none;
+    background: var(--second-bg-color);
+    border-radius: 20px;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card .img{
+    background: orange;
+    height: 148px;
+    height: 148px;
+    border-radius: 50%;
+
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+
+}
+
+.card span {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) -9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+/* Contact Section */
+.contact h2 {
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    text-align: center; /* Ensures the heading is centered */
+}
+
+.contact span {
+    color: orange;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between; /* Ensures inputs are evenly spaced */
+    flex-wrap: wrap;
+    gap: 20px; /* Adds a gap between input fields */
+    margin: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+}
+
+.contact form .input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    animation: glow 2s infinite alternate;
+    border-radius: 0.8rem;
+    margin-top: 0.7rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for better visibility */
+}
+
+.contact form .input-box > input {
+    width: calc(50% - 10px); /* Adjusts width, accounting for the gap */
+}
+
+.contact form textarea {
+    margin-top: 1rem; /* Ensures margin is only at the top */
+}
+
+@media (max-width: 768px) {
+    .contact form .input-box > input {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
